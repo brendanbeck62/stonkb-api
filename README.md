@@ -5,8 +5,11 @@ Stockx api scraper to be used with a few future projects.
 
 
 ## Using the stockx api
-curl -a  https://stockx.com/api/products/nike-blazer-low-off-white-university-red\?includes\=market
 
+
+```
+curl -a  https://stockx.com/api/products/nike-blazer-low-off-white-university-red\?includes\=market
+```
 
 
 
