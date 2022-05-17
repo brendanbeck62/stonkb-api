@@ -1,0 +1,18 @@
+{
+  "name": "stonkb-api",
+  "version": "0.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "dev": "NODE_ENV=dev node server.js",
+    "start": "NODE_ENV=prod node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "fs": "^0.0.1-security"
+  }
+}
