@@ -17,26 +17,14 @@ app.get('/', (req, res) => {
 });
 
 app.get('/test', (req, res) => {
-  data = stockXScraper.getPrices()
-  res.send(data)
-  //stockXScraper.getPrices(shoe, function () {
-  //  cbCounter++;
-  //  if (cbCounter == 5) {
-  //    callback(null, shoe)
-  //  }
-  //});
-});
+  stockXScraper.getPrices(function (data) {
 
-//app.get("/list_movies", (req, res) => {
-//    fs.readFile(__dirname + '/' + 'movies.json', 'utf8', (err, data) => {
-//        res.end(data);
-//    });
-//});
+    res.json(data);
+
+  })
+});
 
 app.listen(PORT, function () {
   console.log(`stonkb-api listening on port`, PORT);
  });
 
-
-//module.exports = app;
-//module.exports = SneaksAPI;

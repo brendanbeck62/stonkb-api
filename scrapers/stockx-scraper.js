@@ -4,7 +4,7 @@ const axios = require('axios')
 module.exports = {
 
   //getPrices = async (shoe, callback) => {
-  getPrices: async () => {
+  getPrices: async (callback) => {
 
       const url = 'https://stockx.com/api/products/nike-blazer-low-off-white-university-red\?includes\=market'
       //const url = 'https://stockx.com/api/products/' + shoe.urlKey + '?includes=market'
@@ -14,15 +14,15 @@ module.exports = {
         }
       };
 
+      try {
+        const response = await axios.get(url, config);
+        // console.log(response)
+        callback(response['data'])
 
-      const response = await axios.get(url, config)
-        .catch(err=> console.log(err))
-
-      console.log(response)
-
-      // TODO logs the json when the route is hit, but returns empty object
-
-      return response;
+      } catch (err) {
+        console.log(err);
+        callback(null)
+      }
 
 
       //let priceMap = {}
