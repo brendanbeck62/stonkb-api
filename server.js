@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 // id = nike-blazer-low-off-white-university-red
 // based off the "urlKey" param in the stockx api response
 app.get('/id/:id', (req, res) => {
-  stockXScraper.getPrices(req.params.id, function (data) {
+  stockXScraper.getProduct(req.params.id, function (data) {
     res.json(data);
   })
 });

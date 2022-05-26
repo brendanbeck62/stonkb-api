@@ -4,7 +4,7 @@ const axios = require('axios')
 module.exports = {
 
   //getPrices = async (shoe, callback) => {
-  getPrices: async (id, callback) => {
+  getProduct: async (id, callback) => {
 
     // nike-blazer-low-off-white-university-red
     const url = 'https://stockx.com/api/products/' + id + '?includes=market'
