@@ -4,17 +4,8 @@ Stockx api scraper to be used with a few future projects.
 
 
 
-## Using the stockx api
-
-
-```
-curl -a  https://stockx.com/api/products/nike-blazer-low-off-white-university-red\?includes\=market
-```
-
-
-
-
 ## Development
+While in development, I am using server.js in the root to test the end points. I plan on switching to a class structure, where the module can be required in and used as functions, rather than just as api end points.
 
 ### NPM
 `server.js` is the main entry point
