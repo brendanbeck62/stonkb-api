@@ -24,6 +24,12 @@ app.get('/id/:id', (req, res) => {
   })
 });
 
+app.get('/search/:query', (req, res) => {
+  stockXScraper.searchProduct(req.params.query, function (data) {
+    res.json(data);
+  })
+});
+
 app.listen(PORT, function () {
   console.log(`stonkb-api listening on port`, PORT);
  });
